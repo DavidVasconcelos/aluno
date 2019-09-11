@@ -50,3 +50,7 @@ hs_err_pid*
 
 ### VS Code ###
 .vscode/
+
+/mvnw
+/mvnw.cmd
+/.mvn/
