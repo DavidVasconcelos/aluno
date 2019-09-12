@@ -5,7 +5,7 @@ http://localhost:8000/swagger-ui.html
 
 ## Salvar aluno:
 
-Url: http://localhost:8000/transactions -> POST
+Url: http://localhost:8000/aluno -> POST
 
 ### Exemplo de Body: 
 
