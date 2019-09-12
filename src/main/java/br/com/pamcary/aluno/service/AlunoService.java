@@ -2,7 +2,6 @@ package br.com.pamcary.aluno.service;
 
 import br.com.pamcary.aluno.entity.Aluno;
 import br.com.pamcary.aluno.exception.AlunoInexistenteException;
-import br.com.pamcary.aluno.exception.IdNuloException;
 import br.com.pamcary.aluno.repository.AlunoRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,27 +31,25 @@ public class AlunoService {
 
     }
 
-    public void salvarAluno(final Aluno aluno) {
+    public Aluno salvarAluno(final Aluno aluno) {
 
-        alunoRepository.save(aluno);
+        return alunoRepository.save(aluno);
 
     }
 
-    public void atualizarAluno(final Aluno aluno) {
+    public Aluno atualizarAluno(final Long id, final Aluno aluno) {
 
-        Optional.ofNullable(aluno.getId()).orElseThrow(() -> new IdNuloException("Aluno com Id nulo"));
-
-        final Aluno alunoSalvo = buscarAlunoPorId(aluno.getId());
+        final Aluno alunoSalvo = buscarAlunoPorId(id);
 
         BeanUtils.copyProperties(aluno, alunoSalvo, "id");
 
-        alunoRepository.save(aluno);
+        return alunoRepository.save(aluno);
 
     }
 
-    public void removerAluno(final Aluno aluno) {
+    public void removerAluno(final Long id) {
 
-        final Aluno alunoSalvo = buscarAlunoPorId(aluno.getId());
+        final Aluno alunoSalvo = buscarAlunoPorId(id);
 
         alunoRepository.delete(alunoSalvo);
     }
