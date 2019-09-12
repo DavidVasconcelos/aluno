@@ -1,6 +1,6 @@
 package br.com.pamcary.aluno.controller;
 
-import br.com.pamcary.aluno.entity.Aluno;
+import br.com.pamcary.aluno.model.Aluno;
 import br.com.pamcary.aluno.service.AlunoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

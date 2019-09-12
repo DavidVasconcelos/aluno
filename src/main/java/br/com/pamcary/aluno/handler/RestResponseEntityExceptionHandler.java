@@ -1,4 +1,4 @@
-package br.com.pamcary.aluno.configuration;
+package br.com.pamcary.aluno.handler;
 
 import br.com.pamcary.aluno.exception.AlunoInexistenteException;
 import br.com.pamcary.aluno.exception.ErrorResponse;

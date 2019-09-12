@@ -1,6 +1,6 @@
 package br.com.pamcary.aluno.service;
 
-import br.com.pamcary.aluno.entity.Aluno;
+import br.com.pamcary.aluno.model.Aluno;
 import br.com.pamcary.aluno.exception.AlunoInexistenteException;
 import br.com.pamcary.aluno.repository.AlunoRepository;
 import org.springframework.beans.BeanUtils;

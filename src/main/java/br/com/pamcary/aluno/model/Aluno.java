@@ -1,4 +1,4 @@
-package br.com.pamcary.aluno.entity;
+package br.com.pamcary.aluno.model;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Getter
 @Setter
