@@ -64,7 +64,7 @@ Url: http://localhost:8000/aluno/1 -> PUT
     "idade": 34
 }
 
-## Remover um aluno por id:
+## Remover um aluno:
 
 Url: http://localhost:8000/aluno/1 -> DELETE
 
