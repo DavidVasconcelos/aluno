@@ -43,7 +43,7 @@ public class AlunoService {
 
         BeanUtils.copyProperties(aluno, alunoSalvo, "id");
 
-        return alunoRepository.save(aluno);
+        return alunoRepository.save(alunoSalvo);
 
     }
 

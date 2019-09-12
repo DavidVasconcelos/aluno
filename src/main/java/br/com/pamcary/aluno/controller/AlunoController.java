@@ -26,7 +26,7 @@ public class AlunoController {
         return ResponseEntity.ok(alunos);
     }
 
-    @GetMapping("/[id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Aluno> buscarPorId(@PathVariable Long id) {
 
         final Aluno aluno = alunoService.buscarAlunoPorId(id);
@@ -45,7 +45,7 @@ public class AlunoController {
 
     }
 
-    @PutMapping("/[id}")
+    @PutMapping("/{id}")
     public ResponseEntity atualizarAluno(@PathVariable Long id, @Valid @RequestBody Aluno aluno) {
 
         final Aluno alunoAtualizado = alunoService.atualizarAluno(id, aluno);
@@ -53,12 +53,12 @@ public class AlunoController {
         return ResponseEntity.ok(alunoAtualizado);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity deletarAluno(@PathVariable Long id) {
 
         alunoService.removerAluno(id);
 
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok().build();
     }
 
 
