@@ -1,5 +1,6 @@
 package br.com.pamcary.aluno.entity;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -21,13 +22,16 @@ public class Aluno {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(notes = "ID gerado automaticamente")
     private Long id;
 
     @NotEmpty(message = "Nome é obrigatório")
+    @ApiModelProperty( notes = "Nome do aluno", required = true)
     private String nome;
 
     @NotNull(message = "Idade é obrigatória")
     @Min(value = 1, message = "Idade não pode ser zero")
+    @ApiModelProperty( notes = "Idade do aluno", required = true)
     private Integer idade;
 
 
